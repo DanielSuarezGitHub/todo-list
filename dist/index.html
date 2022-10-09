@@ -5,9 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+        <!-- header -->
+        <header class="header">Todo List</header>
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="home">
+                <img src="./assets/home.svg" alt="">
+                <h2>home</h2>
+            </div>
+            <div class="week">
+                <img src="./assets/calendar-blank-outline.svg" alt="">
+                <h2>This week</h2>
+            </div>
+            <div class="projects">
+                <img src="./assets/list-box-outline.svg" alt="">
+                <h2>projects</h2>
+                <button>+</button>
+            </div>
+            <div class="projectslist">
+                <ul>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                    <li><span>Test</span><img src="./assets/trashcanwhite.svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!-- todos -->
+        <!-- maincontent -->
+        <div class="main">
+            <div class="title">
+                <h2>Home</h2>
+            </div>
+            <div class="addtask">
+                <button><span>+</span></button>
+                <span>Add Task</span>
+            </div>
+            <div class="tasks">
+                <div class="todo">
+                    <div>
+                        <button>✓</button>
+                        <span>This is a Task</span>
+                    </div>
+                    <span class="date">MM/DD/YYYY</span>
+                    <img src="./assets/pencil.svg" alt="">
+                    <img src="./assets/trash-can-outline.svg" alt="">
+                </div>
+            <dialog class="NewProj">
+                <form action="">
+                    <input type="text" name="projectname" id="projectname" placeholder="Project Name">
+                    <button type="submit">Add Project</button>
+                </form>
+            </dialog>
+            <dialog class="NewTask">
+                <form action="">
+                    <input type="text" name="taskname" id="taskname" placeholder="Task Name">
+                    <input type="date" name="duedate" id="duedate">
+                    <button type="submit">Add Task</button>
+                </form>
+            </dialog>
+     </div>
 </body>
 </html>
