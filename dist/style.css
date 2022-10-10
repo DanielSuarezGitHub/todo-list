@@ -82,7 +82,6 @@ li > img:hover {
   cursor: pointer;
 }
 
-
 .sidebar ul {
   list-style: none;
   display: flex;
@@ -114,14 +113,14 @@ li > img:hover {
 }
 
 .main h2 {
-    font-size: 2.7rem;
+  font-size: 2.7rem;
 }
 
 .projects button {
-    background: 0;
-    border: 0;
-    font-size: 2rem;
-    color: red;
+  background: 0;
+  border: 0;
+  font-size: 2rem;
+  color: red;
 }
 
 .projects button:hover {
@@ -129,11 +128,10 @@ li > img:hover {
   transition: 0.4s ease;
 }
 
-
 .title {
-    display: flex;
-    gap: 50px;
-    align-items: center;
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 .addtask {
@@ -200,13 +198,12 @@ button {
   color: black;
   border: 2px solid black;
   padding: 8px;
-  border-radius: 12px
+  border-radius: 12px;
 }
 
 .todo span:first-child {
   font-size: 1.4rem;
   margin-left: 10px;
-
 }
 
 .todo > * {
@@ -252,33 +249,31 @@ form {
   gap: 30px;
 }
 
-
 dialog {
   border-radius: 12px;
   background-color: #2e3440;
   color: #eceff4;
   border: 1px solid black;
   padding: 40px;
-  animation: 0.5s fadeIn; 
+  animation: 0.5s fadeIn;
 }
-
 
 dialog h2 {
   text-align: center;
 }
 
 .close {
-background: 0;
-border: 0;
-font-size: 32px;
-color: #eceff4;
-position: absolute;
-top: 10px;
-left: 290px;
-
+  background: 0;
+  border: 0;
+  font-size: 32px;
+  color: #eceff4;
+  position: absolute;
+  top: 10px;
+  left: 290px;
 }
 
-[type*='text'], [type*='number'] {
+[type*="text"],
+[type*="number"] {
   height: 50px;
   width: 250px;
   border-radius: 12px;
@@ -286,7 +281,7 @@ left: 290px;
   font-size: 24px;
 }
 
-[type*='checkbox'] {
+[type*="checkbox"] {
   transform: scale(2);
 }
 
@@ -316,7 +311,7 @@ form > legend {
   padding-bottom: 10px;
 }
 
-[type*='submit'] {
+[type*="submit"] {
   padding: 10px 40px;
   font-size: 30px;
   background-color: #5e81ac;
@@ -324,9 +319,8 @@ form > legend {
   border-radius: 12px;
 }
 
-[type*='submit']:hover {
+[type*="submit"]:hover {
   opacity: 80%;
-  
 }
 
 dialog::backdrop {
@@ -335,7 +329,9 @@ dialog::backdrop {
 }
 
 [type="date"] {
-  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  background: #fff
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    97% 50% no-repeat;
 }
 [type="date"]::-webkit-inner-spin-button {
   display: none;
@@ -346,13 +342,12 @@ dialog::backdrop {
 
 /* custom styles */
 
-
 input {
   border: 1px solid #c4c4c4;
   border-radius: 5px;
   background-color: #fff;
   padding: 3px 5px;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
   width: 190px;
 }
 
@@ -364,5 +359,11 @@ input {
   100% {
     opacity: 1;
   }
+}
+
+dialog {
+  position: relative;
+  top: 33%;
+  left: 47.5%;
 }
 

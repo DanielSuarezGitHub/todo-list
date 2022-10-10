@@ -9,6 +9,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <dialog class="NewProj">
+        <form action="">
+            <input type="text" name="projectname" id="projectname" placeholder="Project Name">
+            <button type="submit">Add Project</button>
+        </form>
+    </dialog>
+    <dialog class="NewTask" data-new-task-form>
+        <form action="">
+            <input type="text" name="taskname" id="taskname" placeholder="Task Name" data-new-task-name>
+            <input type="date" name="duedate" id="duedate" data-new-task-date>
+            <button type="submit">Add Task</button>
+        </form>
+    </dialog>
         <!-- header -->
         <header class="header">Todo List</header>
         <!-- sidebar -->
@@ -45,7 +58,7 @@
                 <h2>Home</h2>
             </div>
             <div class="addtask">
-                <button><span>+</span></button>
+                <button id="addtask"><span>+</span></button>
                 <span>Add Task</span>
             </div>
             <div class="tasks">
@@ -58,19 +71,6 @@
                     <img src="./assets/pencil.svg" alt="">
                     <img src="./assets/trash-can-outline.svg" alt="">
                 </div>
-            <dialog class="NewProj">
-                <form action="">
-                    <input type="text" name="projectname" id="projectname" placeholder="Project Name">
-                    <button type="submit">Add Project</button>
-                </form>
-            </dialog>
-            <dialog class="NewTask">
-                <form action="">
-                    <input type="text" name="taskname" id="taskname" placeholder="Task Name">
-                    <input type="date" name="duedate" id="duedate">
-                    <button type="submit">Add Task</button>
-                </form>
-            </dialog>
      </div>
 </body>
 </html>
