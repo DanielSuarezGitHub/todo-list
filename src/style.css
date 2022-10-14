@@ -362,8 +362,13 @@ input {
 }
 
 dialog {
-  position: relative;
-  top: 33%;
-  left: 47.5%;
+  margin: 47vw;
+  margin-top: 50vh;
 }
+
+dialog::backdrop {
+  opacity: 0.8;
+  color: #000000;
+}
+
 
