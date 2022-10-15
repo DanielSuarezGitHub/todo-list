@@ -11,15 +11,22 @@
 <body>
     <dialog class="NewProj" data-new-proj-form>
         <form action="">
-            <input type="text" name="projectname" id="projectname" placeholder="Project Name" data-new-proj-name>
+            <input type="text" name="projectname" id="projectname" placeholder="Project Name" data-new-proj-name required>
             <button type="submit">Add Project</button>
         </form>
     </dialog>
     <dialog class="NewTask" data-new-task-form>
         <form action="">
-            <input type="text" name="taskname" id="taskname" placeholder="Task Name" data-new-task-name>
-            <input type="date" name="duedate" id="duedate" data-new-task-date>
+            <input type="text" name="taskname" id="taskname" placeholder="Task Name" data-new-task-name required>
+            <input type="date" name="duedate" id="duedate" data-new-task-date required>
             <button type="submit">Add Task</button>
+        </form>
+    </dialog>
+    <dialog class="EditTask" data-edit-task-form>
+        <form action="">
+            <input type="text" name="taskname" id="taskname" placeholder="Task Name" data-edit-task-name>
+            <input type="date" name="duedate" id="duedate" data-edit-task-date>
+            <button type="submit">Edit</button>
         </form>
     </dialog>
         <!-- header -->

@@ -8,14 +8,18 @@ class project {
     }
 
     static addTask(name, date, id) {
-        let index = projects[id].tasks.length
-        projects[id].tasks.push({name: name, date: date, index: index})
+        projects[id].tasks.push({name: name, date: date})
+    }
+
+    static deleteTask(id, index) {
+        projects[id].tasks.splice(index, 1)
+        console.log(projects[id].tasks);
     }
 
 
 
     static removeProject(index) {
-        projects = projects.splice(index, 1)
+        projects.splice(index, 1)
     }
 }
 

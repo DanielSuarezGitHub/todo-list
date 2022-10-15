@@ -2,6 +2,7 @@ import trashIcon from "./asset/trash-can-outline.svg";
 import pencilIcon from "./asset/pencil.svg";
 import trashIconW from "./asset/trashcanwhite.svg";
 import { projects, project as projectClass } from "./data";
+import { editTask, forms, showTodo } from "./form";
 
 class uiComponents {
   static createtask(name, date, index) {
@@ -12,7 +13,7 @@ class uiComponents {
     todo.appendChild(leftDiv);
     let completeButton = document.createElement("button");
     completeButton.textContent = "✓";
-    completeButton.addEventListener("click", (e) => alert("test"));
+    completeButton.addEventListener("click", () => removeTask(index));
     let taskName = document.createElement("span");
     taskName.textContent = `${name}`;
     leftDiv.appendChild(completeButton);
@@ -23,16 +24,16 @@ class uiComponents {
     todo.appendChild(due);
     let edit = document.createElement("img");
     edit.src = pencilIcon;
-    edit.addEventListener("click", (e) => alert("test"));
+    edit.addEventListener("click", () => displayEdit(index));
     let deletetask = document.createElement("img");
+    deletetask.id = index
     deletetask.src = trashIcon;
-    deletetask.addEventListener("click", (e) => alert("test"));
+    deletetask.addEventListener("click", () => removeTask(index));
     todo.appendChild(edit);
     todo.appendChild(deletetask);
     return todo;
   }
   static createproject(name, index) {
-    index = index + 1;
     name.length > 10 ? (name = name.slice(0, 9) + "...") : (name = name);
     let project = document.createElement("li");
     let projectName = document.createElement("span");
@@ -53,6 +54,12 @@ function renderHome() {
 
 }
 
+function displayEdit(index) {
+    let id = document.querySelector('.current').id
+    forms.editTaskForm.addEventListener('submit', (e) => editTask(e, index, id))
+    forms.editTaskForm.showModal()
+}
+
 
 
 function render(projects) {
@@ -69,7 +76,6 @@ function deleteThisProject(index) {
 }
 
 function showProject(index) {
-    index = index - 1
     const tasksList = document.querySelector('.tasks')
     let current = document.querySelector('.current')
     current.id = index
@@ -80,6 +86,13 @@ function showProject(index) {
     }
 }
 
+function removeTask(index) {
+    let id = document.querySelector('.current').id
+    console.log(id);
+    console.log(index);
+    projectClass.deleteTask(id, index)
+    showTodo()
+}
 
 
 

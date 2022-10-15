@@ -24,9 +24,19 @@ function createTask(e) {
     formControl.closeFormTask()
 }
 
+
+function editTask(e, index, id) {
+    e.preventDefault()
+    projects[id].tasks[index].name = forms.editTaskFormName.value
+    projects[id].tasks[index].date = forms.taskFormDate.value
+    forms.editTaskForm.close()
+    showTodo()
+}
+
 function showTodo() {
     let id = document.querySelector('.current').id
     const tasksList = document.querySelector('.tasks')
+    tasksList.innerHTML = ''
     for (let i = 0; i < projects[id].tasks.length; i++) {
         tasksList.appendChild(uiComponents.createtask(projects[id].tasks[i].name, projects[id].tasks[i].date, i))
     }
@@ -69,12 +79,15 @@ const forms = (() => {
     const taskFormDate = document.querySelector('[data-new-task-date]')
     const openProjForm = document.querySelector('.projects button')
     const openTaskForm = document.querySelector('#addtask')
+    const editTaskForm = document.querySelector('[data-edit-task-form]')
+    const editTaskFormName = document.querySelector('[data-edit-task-name]')
+    const editTaskFormDate = document.querySelector('[data-edit-task-date]')
     openTaskForm.addEventListener('click', formControl.openFormTask)
     taskForm.addEventListener('submit', createTask)
     openProjForm.addEventListener('click', formControl.openFormProj)
     projectForm.addEventListener('submit', createProject)
-    return {projectFormName, taskFormName, taskFormDate}
+    return {projectFormName, taskFormName, taskFormDate, editTaskForm, editTaskFormDate, editTaskFormName}
 })()
 
 
-export default forms
+export { forms, showTodo, editTask }
