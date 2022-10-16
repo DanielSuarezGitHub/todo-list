@@ -1,11 +1,7 @@
-import {uiComponents} from './dom'
-import forms from './form'
-import './style.css'
+import { projects } from "./data";
+import { render, showProject } from "./dom";
+import "./style.css";
 
 
-export default forms
-
-let tasks = document.querySelector('.tasks')
-tasks.appendChild(uiComponents.createtask('Hello', '2007/22/22'))
-
-
+render(projects);
+showProject(0);

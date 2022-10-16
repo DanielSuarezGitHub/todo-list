@@ -179,6 +179,8 @@ button {
   gap: 20px;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
+  padding: 0px 20px;
 }
 
 .tasks img {
@@ -371,4 +373,6 @@ dialog::backdrop {
   color: #000000;
 }
 
-
+#hidden {
+  display: none;
+}
