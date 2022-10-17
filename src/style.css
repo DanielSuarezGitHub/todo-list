@@ -156,18 +156,8 @@ li > img:hover {
   width: 100%;
 }
 
-.addtask > button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  padding-bottom: 5px;
-  font-size: 3rem;
-  border: 0;
-  background-color: #000000;
-  color: white;
+.addtask:hover {
+  cursor: pointer;
 }
 
 button {

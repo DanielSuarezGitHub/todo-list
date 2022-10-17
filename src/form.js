@@ -80,7 +80,7 @@ const forms = (() => {
   const taskFormName = document.querySelector("[data-new-task-name]");
   const taskFormDate = document.querySelector("[data-new-task-date]");
   const openProjForm = document.querySelector(".projects button");
-  const openTaskForm = document.querySelector("#addtask");
+  const openTaskForm = document.querySelector(".addtask");
   const editTaskForm = document.querySelector("[data-edit-task-form]");
   const editTaskFormName = document.querySelector("[data-edit-task-name]");
   const editTaskFormDate = document.querySelector("[data-edit-task-date]");
